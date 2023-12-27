@@ -5,13 +5,8 @@ public class Solution {
        Stack<Integer> stack = new Stack<>();
 
         for(Integer i : arr){
-
-            if(!(stack.isEmpty())){
-                if(!(Objects.equals(stack.peek(), i))){
+           if((stack.size() == 0) || !Objects.equals(stack.peek(), i)){
                     stack.push(i);
-                }
-            }else {
-                stack.push(i);
             }
         }
         List<Integer> answer = new ArrayList<>(stack);
